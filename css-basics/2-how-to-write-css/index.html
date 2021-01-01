@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <script src="http://localhost:8080/skewer"></script>
+    <title>How to write css?</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <style>
+      h2 {
+	  background-color: green;
+          color: white				
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inline Styling (not the best way, too much coding) -->
+    <h1 style="background-color: red; color: white">Inline styling</h1>
+    
+    <!-- Internal Styling: style is written in the same HTML document inside head tag-->
+    <h2>Internal styling</h2>
+    
+    <!-- If we duplicate, each h2 element will have the same styles -->
+    <h2>Duplicate - Internal styling</h2>
+    <h2>Duplicate - Internal styling</h2>
+    <h2>Duplicate - Internal styling</h2>
+    <!-- But method is not encouraged  large products containing large number of HTML document-->
+
+    <!-- 
+	 External Style:  One style code can be used for several documents.
+	 Write styles in a file with extension .css
+	 Import the file in HTML document (inside head tag)
+      -->
+    <h3>External style</h3>
+    <!-- The style which was imported can also be used for other documents. Check out index2.html -->
+  </body>
+</html>
+
+<!-- 
+     Explanation of syntax
+     
+     h2 {
+       background color: red;
+       color: white
+     }
+
+     * h2 - selector
+     * background, color - properties 
+     * red, white - values of properties
+     * property and value pair is called declarations 
+     * after each declarations place semicolon 
+ -->

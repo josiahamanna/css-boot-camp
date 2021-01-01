@@ -1,0 +1,8 @@
+* Structure of HTML elements
+(How HTML document actually represented?)
+[[./html-elements-tree.png]]
+1. Document is represented as a family tree.
+2. Relation ship between members is denoted by terms like parent, child and siblings (like a real family).
+3. HTML Document begins with opening HTML tag. All the elements of web page is contained within this element. It has no parent, no siblings.
+4. One level deeper, there is head and body side by side (which makes them siblings).
+5. Head has to children meta and child, siblings of one another. 
