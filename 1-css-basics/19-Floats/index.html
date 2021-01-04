@@ -1,0 +1,56 @@
+<!--
+     Float are becoming less popular because of Grid and Flex-box
+     Floats allow us to take elements from the normal flow of the web-page and place it as far to the right/left containing element as possible
+     When using float property we also should specify the width property to indiate how wide float down that should be
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: grey;
+        border-top: 20px solid blue;
+        border-bottom: 20px solid black;
+        /*         overflow: auto; */
+      }
+      .left {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        float: left;
+      }
+      .right {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        float: right;
+      }
+      /* .clear {
+        clear: both;
+	 } */
+      .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container clearfix">
+      <div class="left"></div>
+      <div class="right"></div>
+      <!-- <div class="clear"></div> -->
+    </div>
+  </body>
+</html>
+
+<!--
+     There is a special case here. After we float right and left containing element seems to be disappeared
+     To fix it there are 3 methods
+     1. To the container give declaration 'overflow: auto'
+     2. Create a new div inside the container and for that container give style declaration 'clear:both;'
+     3. Give a class named clearfix and use the pseudo class after and  give style declaration 'content: ""; display: block; clear:both;'
+-->

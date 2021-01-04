@@ -1,0 +1,52 @@
+<!-- We talk about Box Model when we deal with layout of elements 
+     Generally all HTML tags will consist of Box Model 
+     1. Content: Can be tags or images. Able to manage it's size using height and width
+     2. Padding: Clears an area around content and is transparent.
+     3. Border: Padding is followed by border. It is kinda rapper for content and padding. By default it's invisible.
+     4. Margin: Clear an area outside of the border and is transparent.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <style>
+      body {
+	  margin: 0;
+      }
+      h1 {
+	  border-width: 5px;
+	  border-style: solid;
+	  border-color: red;
+	  /*border: 5px solid red;*/
+	  padding-top: 30px;
+	  padding-right: 50px;
+	  padding-bottom: 70px;
+	  padding-left: 90px;
+	  /*padding: 30px 50px 70px 90px;*/
+	  /*padding: 50px 100px;*/
+	  /*padding: 100px;*/
+	  margin-top: 50px;
+	  margin-right: 100px;
+	  margin-bottom: 150px;
+	  margin-left: 200px;
+	  /*margin: 50px 100px 150px 200px;*/
+	  /*margin: 100px 200px;*/
+	  /*margin: 100px*/
+      }
+      span {
+	  border: 5px solid green;
+	  padding: 100px;
+	  margin: 100px;
+	  width: 300px;
+	  height: 300px;
+	  /*box-sizing: content-box; only content will have the total width and height*/
+	  box-sizing: border-box; /* padding and border will be included in both width and height */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Box Model</h1>
+    <span>Box Sizing</span>
+  </body>
+</html>

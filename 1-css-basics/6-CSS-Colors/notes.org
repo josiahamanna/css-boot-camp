@@ -1,0 +1,31 @@
+
+*. *Colors make websites modern and beautiful*
+/There are multiple ways to choose colors we need/
+     1) Color name:- Modern web browser support 140 standard color names (not popular)
+        - Example:- color: red;
+     2) RGB values:- Stands for Red, Green and blue
+        - Formula:- Each value specifies the intensity of the color between 0 - 255
+        - Example:-
+          1. rgb(255, 0, 0) Red
+          2. rgb(0, 255, 0) Green
+          3. rgb(0, 0, 255) Blue
+          4. rgb(0, 0, 0) black
+          5. rgb(255, 255, 255) white
+          6. rgba(255, 0, 0, 0.5) Red with decreased opacity (range 0-1) [only in css 3]
+     3) Hexadecimal value:- Starts with pound sign (#)
+        - Example:-
+          1) #ff0000 Red (short #f00; not much range in short hand)
+          2) #00ff00 Green (short #0f0)
+          3) #0000ff Blue (short #00f)
+          4) #000000 Black (short #000)
+          5) #ffffff white (short #fff)
+
+*. *Tips and Recommendations*
+     * Red color grabs users attention, irritative effect (used for warning).
+     * Green color is restful for users' eyes.
+     * Blue color relaxes, refreshes and produces peaceful feelings and moods
+     * Generally it's not recommended to used many different colors in web page because it creates complementary contrasts.
+     * Use Right dominant color.
+     * Use perfect color scheme.
+     * Use right background color.
+     * Use colors in the right places.

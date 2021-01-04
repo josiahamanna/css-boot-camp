@@ -1,0 +1,277 @@
+<!--
+     Using absolute position we can manage moving the element on the entire page with out breaking other element's normal flow.
+     Absolute elements move according to it's closest relative parent.
+     We can control which element can be on others. Use z-index for that. By default it is set to 0.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      .container {
+        background-color: orangered;
+        width: 700px;
+        height: 250px;
+        position: fixed;
+        top: 200px;
+        left: 150px;
+      }
+      .box {
+        color: #fff;
+        width: 350px;
+        height: 100px;
+        font-size: 25px;
+        text-align: center;
+      }
+      .box-1 {
+        background-color: green;
+        position: absolute; /*box 2 will be behind this*/
+        /* You can see it by activating following code  */
+        /*         top: 300px; */
+        /*         bottom: 0; */
+        top: 50px;
+        left: 200px;
+        z-index: 2;
+      }
+      .box-2 {
+        background-color: royalblue;
+        position: relative;
+        /*         z-index: 10; */
+        left: 350px;
+      }
+      .box-3 {
+        background-color: gray;
+        margin: 20px;
+        position: relative;
+        z-index: 3;
+      }
+      .box-4 {
+        background-color: yellow;
+        color: black;
+        position: absolute;
+        top: 0;
+      }
+      .box-5 {
+        background-color: #0df029;
+        color: white;
+        position: Absolute;
+        top: 100px;
+        left: 350px;
+      }
+      .box-6 {
+        background-color: #ed93de;
+        height: 80px;
+        font-size: 60px;
+        text-align: center;
+        position: sticky;
+        top: 10px;
+      }
+      span {
+        display: block;
+        margin-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-6">Box sticky!</div>
+    <div class="container">
+      <div class="box box-1">Box 1</div>
+      <div class="box box-2">Box 2</div>
+      <div class="box box-3">Box 3</div>
+      <div class="box box-4">Box 4</div>
+      <div class="box box-5"><span>Box 5</span></div>
+    </div>
+    <p>
+      Sit amet, porttitor eget dolor morbi non arcu risus, quis varius quam
+      quisque id diam vel quam elementum. Commodo elit, at imperdiet dui
+      accumsan sit! Vel pretium lectus quam id leo in vitae turpis massa sed
+      elementum tempus egestas sed sed risus pretium quam vulputate dignissim
+      suspendisse in est ante in nibh? Eu, facilisis sed odio morbi quis commodo
+      odio aenean sed adipiscing diam donec adipiscing tristique risus nec
+      feugiat in fermentum posuere urna! Libero justo, laoreet sit amet cursus
+      sit amet, dictum sit amet justo donec enim diam, vulputate ut pharetra sit
+      amet, aliquam! Tristique senectus et netus et malesuada fames ac turpis
+      egestas sed tempus, urna et pharetra pharetra? Quam quisque id diam vel
+      quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum
+      posuere lorem ipsum dolor sit amet, consectetur adipiscing elit! Imperdiet
+      dui accumsan sit amet nulla facilisi morbi tempus iaculis. Condimentum id
+      venenatis a, condimentum vitae sapien pellentesque habitant morbi
+      tristique senectus et netus et malesuada fames ac turpis egestas sed
+      tempus, urna et pharetra pharetra. Volutpat odio facilisis mauris sit amet
+      massa vitae tortor condimentum lacinia quis vel eros donec ac odio? Eu
+      scelerisque felis imperdiet proin fermentum leo vel orci porta non.
+      Lacinia quis vel eros donec ac? Purus ut faucibus pulvinar elementum
+      integer enim neque, volutpat ac tincidunt vitae, semper quis lectus nulla
+      at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque
+      felis imperdiet. A molestie lorem ipsum dolor sit amet, consectetur
+      adipiscing elit? Vivamus at augue eget arcu dictum varius. Vitae proin
+      sagittis, nisl rhoncus mattis rhoncus, urna neque viverra justo, nec
+      ultrices! Nisi, scelerisque eu ultrices vitae, auctor eu augue. Porta non
+      pulvinar neque laoreet suspendisse interdum consectetur libero, id
+      faucibus nisl tincidunt eget nullam non nisi est, sit amet facilisis magna
+      etiam tempor, orci! Nibh tortor, id aliquet lectus proin nibh nisl,
+      condimentum id venenatis a, condimentum vitae sapien pellentesque habitant
+      morbi tristique senectus et netus et malesuada fames ac turpis egestas
+      sed. Imperdiet proin fermentum leo vel orci porta non pulvinar neque
+      laoreet suspendisse interdum consectetur libero, id faucibus nisl
+      tincidunt eget nullam non nisi est, sit amet facilisis magna etiam tempor.
+      Orci dapibus ultrices in iaculis! Sed egestas egestas fringilla phasellus
+      faucibus scelerisque eleifend donec pretium vulputate sapien nec? Id velit
+      ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus
+      faucibus ornare suspendisse sed nisi lacus, sed viverra tellus? At
+      elementum eu, facilisis sed odio morbi quis! Metus vulputate eu
+      scelerisque felis imperdiet proin! Ut venenatis tellus in metus vulputate
+      eu scelerisque felis imperdiet proin fermentum leo vel orci porta non
+      pulvinar neque laoreet. Diam in arcu cursus euismod quis viverra nibh cras
+      pulvinar mattis nunc, sed blandit libero volutpat sed cras ornare arcu dui
+      vivamus arcu felis! Nisi lacus, sed viverra tellus in hac habitasse platea
+      dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim
+      cras tincidunt lobortis. Morbi blandit cursus risus, at ultrices mi tempus
+      imperdiet! Tellus molestie nunc, non blandit massa enim nec dui nunc
+      mattis enim ut! Lectus quam id leo in vitae turpis massa sed elementum
+      tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse
+      in est ante in nibh mauris, cursus? Volutpat consequat, mauris nunc congue
+      nisi, vitae suscipit tellus! Amet, consectetur adipiscing elit
+      pellentesque habitant morbi tristique senectus et netus et malesuada
+      fames. Varius morbi enim nunc, faucibus a pellentesque sit amet, porttitor
+      eget dolor morbi non arcu risus, quis varius quam. Tempor nec feugiat nisl
+      pretium fusce id velit ut tortor. Massa id neque aliquam vestibulum morbi
+      blandit cursus risus, at ultrices mi tempus imperdiet nulla malesuada
+      pellentesque elit eget gravida cum sociis natoque penatibus et magnis! Vel
+      fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis
+      enim lobortis scelerisque fermentum dui faucibus in ornare quam viverra.
+      Id porta nibh venenatis cras sed felis eget velit aliquet sagittis id
+      consectetur purus ut faucibus pulvinar elementum integer enim neque,
+      volutpat ac tincidunt vitae, semper quis. Nulla facilisi nullam vehicula
+      ipsum a arcu cursus vitae congue mauris rhoncus aenean vel elit
+      scelerisque mauris pellentesque pulvinar pellentesque habitant morbi
+      tristique senectus et netus et malesuada? Elit duis tristique sollicitudin
+      nibh sit amet commodo? Augue interdum velit euismod in pellentesque massa
+      placerat duis. Magna fringilla urna, porttitor rhoncus dolor purus.
+      Rhoncus dolor purus non enim praesent elementum facilisis leo, vel
+      fringilla est ullamcorper eget nulla facilisi etiam dignissim diam quis
+      enim lobortis scelerisque fermentum dui faucibus in. Arcu, non sodales
+      neque sodales ut etiam sit amet nisl purus? Non tellus orci, ac auctor
+      augue mauris augue neque, gravida in fermentum et, sollicitudin ac orci
+      phasellus egestas tellus rutrum tellus pellentesque. Sit amet facilisis
+      magna etiam tempor, orci eu lobortis elementum, nibh tellus molestie nunc,
+      non blandit massa enim nec dui nunc. Aliquam eleifend mi in nulla posuere
+      sollicitudin aliquam ultrices sagittis. Vitae proin sagittis, nisl rhoncus
+      mattis rhoncus, urna neque viverra justo, nec? Molestie a, iaculis at erat
+      pellentesque adipiscing commodo elit, at imperdiet dui accumsan sit?
+      Habitant morbi tristique senectus et netus et malesuada fames ac turpis
+      egestas integer eget aliquet nibh praesent tristique magna sit amet purus
+      gravida quis blandit turpis cursus. Nulla aliquet enim tortor, at auctor
+      urna nunc id cursus metus? Lorem sed risus ultricies tristique nulla
+      aliquet enim tortor, at auctor urna nunc id cursus metus aliquam eleifend
+      mi in nulla posuere sollicitudin aliquam ultrices sagittis! Nibh tortor,
+      id aliquet lectus proin nibh nisl, condimentum id venenatis? Et malesuada
+      fames ac turpis egestas sed tempus? Sed viverra ipsum nunc aliquet
+      bibendum enim, facilisis gravida neque convallis a cras semper.
+      Consectetur libero, id faucibus nisl tincidunt eget nullam non nisi est,
+      sit amet facilisis magna etiam tempor, orci eu lobortis elementum, nibh
+      tellus molestie nunc, non blandit massa enim. Integer eget aliquet nibh
+      praesent tristique magna sit amet purus gravida quis. Pretium quam
+      vulputate dignissim suspendisse in est ante in nibh mauris, cursus mattis
+      molestie a, iaculis at erat pellentesque adipiscing! Rhoncus aenean vel
+      elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi
+      tristique senectus. Nulla aliquet enim tortor, at auctor urna nunc id
+      cursus metus aliquam eleifend mi in nulla posuere sollicitudin aliquam
+      ultrices sagittis. Lectus urna duis convallis convallis tellus, id
+      interdum velit laoreet id donec ultrices tincidunt arcu, non sodales neque
+      sodales ut etiam sit amet nisl purus, in mollis nunc sed! Faucibus
+      interdum posuere lorem ipsum dolor sit amet, consectetur adipiscing elit
+      duis tristique sollicitudin nibh sit amet commodo. Commodo sed egestas
+      egestas fringilla phasellus faucibus scelerisque. Posuere morbi leo urna,
+      molestie at! Viverra mauris, in aliquam sem fringilla ut morbi tincidunt
+      augue interdum velit euismod in pellentesque massa placerat. Sed turpis
+      tincidunt id aliquet risus feugiat in ante metus, dictum at tempor
+      commodo, ullamcorper a lacus vestibulum sed arcu non odio. Semper eget
+      duis at tellus at urna condimentum mattis pellentesque id nibh tortor, id
+      aliquet lectus! Semper eget duis at tellus at urna condimentum mattis
+      pellentesque id nibh tortor. Elementum facilisis leo, vel fringilla est
+      ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis
+      scelerisque fermentum dui faucibus in ornare quam viverra orci? Tristique
+      senectus et netus et malesuada fames ac turpis egestas integer eget
+      aliquet nibh praesent tristique? Feugiat in ante metus, dictum at tempor
+      commodo, ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia
+      at quis risus sed vulputate odio ut enim blandit. Sem et tortor consequat
+      id porta nibh venenatis cras sed felis eget velit aliquet sagittis id
+      consectetur purus ut faucibus! Elementum sagittis vitae et leo duis ut
+      diam quam nulla porttitor? Quam lacus suspendisse faucibus interdum
+      posuere lorem ipsum! Vel facilisis volutpat, est velit egestas dui, id
+      ornare arcu odio ut sem nulla pharetra diam sit amet nisl suscipit
+      adipiscing bibendum. Habitant morbi tristique senectus et netus et
+      malesuada fames ac turpis egestas maecenas pharetra convallis. Sagittis
+      aliquam malesuada bibendum arcu vitae elementum curabitur vitae nunc sed
+      velit dignissim sodales ut eu sem integer vitae. Facilisis sed odio morbi
+      quis commodo odio aenean sed adipiscing diam donec adipiscing tristique
+      risus nec feugiat in fermentum posuere urna nec tincidunt praesent semper
+      feugiat nibh. Orci dapibus ultrices in iaculis nunc sed augue lacus,
+      viverra vitae congue eu, consequat ac? Lorem sed risus ultricies tristique
+      nulla aliquet enim tortor, at auctor urna nunc id cursus metus aliquam
+      eleifend mi in nulla posuere sollicitudin aliquam. Metus vulputate eu
+      scelerisque felis imperdiet proin fermentum leo vel orci porta non
+      pulvinar neque laoreet suspendisse interdum consectetur libero, id
+      faucibus nisl tincidunt eget nullam non nisi est! Duis at consectetur
+      lorem donec massa sapien, faucibus et! Ac orci phasellus egestas tellus
+      rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi?
+      Ipsum suspendisse ultrices gravida dictum fusce ut placerat orci nulla?
+      Integer quis auctor elit sed vulputate mi sit amet mauris commodo quis
+      imperdiet massa tincidunt nunc. Egestas congue quisque egestas diam in
+      arcu cursus euismod quis viverra nibh cras? Cursus turpis massa tincidunt
+      dui ut ornare lectus sit amet est placerat in egestas erat imperdiet sed
+      euismod nisi? Egestas pretium aenean pharetra, magna ac placerat
+      vestibulum! Amet, dictum sit amet justo donec enim diam, vulputate ut
+      pharetra sit amet, aliquam id diam maecenas ultricies mi eget mauris!
+      Habitasse platea dictumst vestibulum rhoncus est pellentesque elit
+      ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue
+      eget. Rhoncus, urna neque viverra justo, nec ultrices dui sapien eget!
+      Diam maecenas ultricies mi eget mauris pharetra et. Feugiat nibh sed
+      pulvinar proin gravida hendrerit lectus a molestie lorem ipsum dolor sit
+      amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus
+      venenatis, lectus magna fringilla urna, porttitor! Volutpat ac tincidunt
+      vitae, semper quis. Orci sagittis eu volutpat odio facilisis mauris! In
+      fermentum posuere urna nec tincidunt praesent semper feugiat nibh sed
+      pulvinar proin. Phasellus egestas tellus rutrum tellus. Cras pulvinar
+      mattis nunc, sed blandit libero volutpat sed cras ornare arcu dui vivamus?
+      Cursus euismod quis viverra nibh cras pulvinar mattis nunc, sed blandit
+      libero volutpat sed cras ornare arcu dui vivamus arcu felis, bibendum ut
+      tristique et, egestas quis ipsum suspendisse? Egestas sed tempus, urna et!
+      Id interdum velit laoreet id donec ultrices tincidunt arcu, non sodales
+      neque sodales ut etiam sit amet nisl purus, in mollis nunc sed id semper
+      risus in hendrerit gravida rutrum! Aliquam etiam erat velit, scelerisque
+      in dictum non, consectetur a erat nam at lectus urna duis convallis
+      convallis tellus. Nunc sed augue lacus, viverra vitae congue eu, consequat
+      ac felis donec et odio. Viverra ipsum nunc aliquet bibendum enim,
+      facilisis gravida neque convallis a cras semper auctor neque, vitae tempus
+      quam pellentesque nec nam aliquam sem et tortor consequat? Duis ut diam
+      quam nulla porttitor massa id neque aliquam vestibulum morbi blandit
+      cursus risus, at ultrices mi tempus imperdiet nulla malesuada pellentesque
+      elit eget gravida. Quis blandit turpis cursus in hac habitasse platea
+      dictumst quisque sagittis, purus sit amet volutpat! Sed blandit libero
+      volutpat sed cras ornare arcu dui vivamus arcu felis, bibendum ut
+      tristique et, egestas quis ipsum suspendisse ultrices gravida dictum fusce
+      ut placerat orci nulla pellentesque! Scelerisque fermentum dui faucibus in
+      ornare quam viverra orci sagittis eu volutpat odio facilisis? Diam
+      maecenas sed enim ut sem viverra aliquet eget sit amet tellus cras
+      adipiscing enim eu turpis egestas pretium aenean pharetra, magna ac
+      placerat vestibulum, lectus mauris? Maecenas accumsan, lacus vel facilisis
+      volutpat, est velit egestas dui, id ornare arcu odio ut sem nulla pharetra
+      diam sit amet nisl suscipit adipiscing bibendum. Amet, consectetur
+      adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla
+      facilisi nullam vehicula ipsum a arcu cursus vitae congue. Turpis egestas
+      integer eget aliquet nibh praesent tristique magna sit amet purus gravida
+      quis blandit turpis cursus in hac habitasse platea dictumst quisque
+      sagittis, purus? Nunc scelerisque viverra mauris, in aliquam sem fringilla
+      ut morbi tincidunt augue interdum velit euismod in pellentesque massa
+      placerat duis ultricies lacus sed turpis tincidunt id aliquet risus
+      feugiat! Lectus quam id leo in vitae turpis massa sed elementum tempus
+      egestas sed sed risus pretium quam vulputate dignissim suspendisse in est
+      ante in nibh mauris, cursus! Adipiscing elit ut aliquam, purus sit amet
+      luctus venenatis, lectus magna fringilla urna, porttitor rhoncus dolor
+      purus non enim praesent.
+    </p>
+  </body>
+</html>

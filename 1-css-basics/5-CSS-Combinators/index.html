@@ -1,0 +1,47 @@
+<!-- 
+     CSS Combinators:
+     * Defines relationship between selectors
+     * Four different combinators
+       - Descendent (space): Matches all descendent elements of specified element.
+       - Child (>): Selects all immediate children of specified element.
+       - Adjacent (+): Selects immediately following sibling of specified element
+       - General (~): Selects all siblings placed after specified element.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Combinators</title>
+    <style>
+        section p {
+            background-color: red;
+        }
+
+        section > p {
+            background-color: green;
+        }
+
+        h1 + p {
+            background-color: yellow;
+        }
+
+        h1 ~ p { 
+             background-color: orange; 
+        } 
+    </style>
+</head>
+<body>
+
+    <section>
+        <p>Paragraph 1</p>
+        <h1>Heading</h1>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <div>
+            <p>Nested Paragraph</p>
+        </div>
+        <p>Paragraph 4</p>
+        <p>Paragraph 5</p>
+    </section>
+
+</body>
+</html>
