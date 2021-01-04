@@ -1,0 +1,35 @@
+<!-- 
+     Inheritance: Parent child relationship
+     In CSS, each child styles from parent element
+  -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <style>
+      body {
+	  color: red
+      }
+      div {
+	  color: blue
+      }
+      h1 {
+	  color: green
+      }
+    </style>
+  </head>
+  <!-- Style is given to body, but div inside it will inherit those styles -->
+  <body>
+    <!-- Style is given to div, so the inherited styles are overridden -->
+    <div>
+      <!-- 
+	   Child Element inherits styles from parent element 
+	   By default if child has no styles, closer parent's style is inherited
+	   But if child has it's own styles, the inherited one is overridden and no longer applied  
+	-->
+      <h1>Heading</h1>
+      <p>Paragraph</p>
+    </div>
+  </body>
+</html>

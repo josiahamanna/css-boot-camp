@@ -1,0 +1,39 @@
+<!-- 
+     In general two types of measurement units
+     1. Absolute: Fixed unit (2px means 2px, no matter what)
+     2. Relative: Length relative to another property. Relative units scale better between different rendering mediums.
+  -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+    <style>
+      html {
+      	  font-size: 30px;
+      }
+      body {
+	  font-size: 20px;
+      }
+      /* 
+	 rem: In general rem is calculated according to all the HTML element
+	 it doesn't matter if parent element has different sizes
+	 always calculated from the HTML size
+      */
+      h1, p {
+      	  font-size: 3em;
+      }
+      div {
+	  font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <div>
+      <p>Paragraph</p>
+    </div>
+  </body>
+</html>
+<!-- Check computed section to see how it works -->
+<!-- Using rem, if the font size changed in the browser settings, in the web page it will be reflected (for this to happen don't manually give size to HTML tag; let it take the default size)  -->

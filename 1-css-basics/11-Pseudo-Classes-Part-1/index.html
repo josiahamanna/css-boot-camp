@@ -1,0 +1,59 @@
+<!--
+     Pseudo classes: Define special state of an element. 
+                     By using them we will be able to make web page little bit dynamic.
+		     Syntax is followed by colon. (a:hover)
+     Pseudo elements: Define style for specific part of an element.
+                      By using them we will be able to create additional content for elements and also style them.
+                      Syntax is followed by two colons. (h1::after)
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <style>
+    h1:hover {
+      font-family: monospace;
+      color: blue;
+    }
+    a:link {
+      font-size: 35px;
+      text-decoration: none;
+      color: green;
+    }
+    a:visited {
+      color: goldenrod;
+    }
+    a:hover {
+      font-size: 40px;
+      color: grey;
+    }
+    a:active {
+      color: skyblue;
+    }
+    .dropdown-contents a {
+      display: none;
+    }
+    .dropdown:hover .dropdown-contents a {
+      display: block;
+      color: red;
+    }
+  </style>
+  <body>
+    <h1>Pseudo classes</h1>
+    <a href="https://www.google.com">Click here</a>
+    <br />
+    <a href="https://www.github.com/nissi-shalom">Visit me</a>
+    <hr />
+    <div class="dropdown">
+      <a href="#">Items</a>
+      <div class="dropdown-contents">
+        <a href="#">Apple</a>
+        <a href="#">Orange</a>
+        <a href="#">Mango</a>
+      </div>
+    </div>
+  </body>
+</html>

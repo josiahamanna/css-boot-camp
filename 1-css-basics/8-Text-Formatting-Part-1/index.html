@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Text Formatting</title>
+    <style>
+      p {
+	  background-color: #23af23;
+	  color: #fff;
+	  font-size: 25px; /* px - pixel; absolute measurement unit*/
+	  text-align: center; /* works with block level elements*/
+      }
+      div {
+	  text-align: right;
+	  border: 2px solid red;
+      }
+      span {
+	  display: inline;
+	  background-color: #2323af;
+	  color: #fff;
+	  font-size: 25px; /* px - pixel; absolute measurement unit*/
+	  text-align: right; /* does not work with inline elements*/
+      }
+    </style>
+  </head>
+  <body>
+    <!-- paragraph is a block level element -->
+    <p>Donec pretium posuere tellus. </p>
+    <!-- 
+	 Difference between block level and inline elements
+	 * Block level takes full width available in the page
+	 * Inline will take width required to display content of the element
+	 * in order to convert block level element to inline element use declaration:- display: inline;
+	 * text-align property does not apply for inline element
+      -->
+    <div>
+      <span>Enim tortor, at.</span>
+    </div>
+  </body>
+</html>

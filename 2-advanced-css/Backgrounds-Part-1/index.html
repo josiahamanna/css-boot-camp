@@ -1,0 +1,106 @@
+<!--
+    During importing the image, and the file name contains space, you should put it in quotes. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Background</title>
+    <style>
+      div {
+        height: 500px;
+        width: 500px;
+        border: 50px double brown;
+        margin: 100px auto;
+        text-align: center;
+        color: skyblue;
+        background-image: url("./image.jpg");
+        background-repeat: no-repeat; /* repeat-x, repeat-y*/
+        /* background-position takes two values (check bellow comments)*/
+        background-position: 50% 50%;
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <h1>Hello world</h1>
+    </div>
+    <p>
+      Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis
+      scelerisque fermentum dui faucibus in ornare quam? At in tellus integer
+      feugiat scelerisque varius morbi enim nunc, faucibus a pellentesque sit
+      amet, porttitor eget dolor morbi non arcu risus, quis varius quam quisque
+      id diam vel quam! Risus pretium quam vulputate dignissim suspendisse in
+      est ante in nibh mauris, cursus mattis molestie a, iaculis. Etiam
+      dignissim diam quis enim lobortis scelerisque fermentum dui faucibus in
+      ornare quam viverra orci sagittis eu volutpat odio facilisis mauris sit
+      amet massa vitae tortor condimentum lacinia quis vel! Eget nunc
+      scelerisque viverra mauris, in aliquam sem fringilla ut morbi tincidunt
+      augue interdum velit euismod in pellentesque massa placerat duis ultricies
+      lacus sed. Massa sapien, faucibus et molestie? Volutpat sed cras ornare
+      arcu dui vivamus arcu felis, bibendum ut tristique et, egestas quis ipsum
+      suspendisse ultrices gravida? Suspendisse sed nisi lacus, sed viverra
+      tellus in hac habitasse platea dictumst vestibulum rhoncus est
+      pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat
+      vivamus at augue eget arcu. Nunc sed augue lacus, viverra vitae congue eu,
+      consequat ac felis donec et odio pellentesque diam volutpat commodo sed
+      egestas! Bibendum at varius vel, pharetra vel turpis nunc eget lorem
+      dolor, sed viverra ipsum nunc aliquet bibendum enim. Odio pellentesque
+      diam volutpat commodo sed egestas egestas fringilla phasellus faucibus
+      scelerisque eleifend donec? Id aliquet lectus proin nibh nisl, condimentum
+      id venenatis a, condimentum vitae sapien pellentesque habitant morbi
+      tristique senectus et netus et malesuada fames. Felis, bibendum ut
+      tristique et, egestas quis ipsum suspendisse ultrices gravida dictum fusce
+      ut placerat orci nulla pellentesque dignissim enim, sit amet venenatis
+      urna cursus eget nunc? Lectus a molestie lorem ipsum dolor sit amet,
+      consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis,
+      lectus magna fringilla urna, porttitor rhoncus dolor purus! Et netus et
+      malesuada fames ac turpis egestas! Sed elementum tempus egestas sed. Sed
+      viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est!
+      Nulla at volutpat diam ut venenatis tellus in metus vulputate eu
+      scelerisque felis imperdiet proin fermentum leo vel orci porta non. Mauris
+      sit amet massa vitae tortor condimentum lacinia quis vel eros donec ac
+      odio tempor orci dapibus ultrices in iaculis nunc? Lectus nulla at
+      volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis
+      imperdiet proin. Mattis pellentesque id nibh tortor, id aliquet lectus. Eu
+      ultrices vitae, auctor eu augue ut lectus arcu, bibendum at varius! Massa
+      massa ultricies mi, quis hendrerit dolor magna eget est lorem ipsum dolor
+      sit amet, consectetur adipiscing elit pellentesque habitant morbi
+      tristique senectus et netus et malesuada fames ac turpis? Tempor commodo,
+      ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia at quis
+      risus sed vulputate odio ut enim. Lorem sed risus ultricies tristique
+      nulla aliquet enim tortor, at auctor urna nunc id. Quam vulputate
+      dignissim suspendisse in est ante in nibh mauris, cursus mattis molestie
+      a, iaculis at erat pellentesque adipiscing commodo elit, at imperdiet!
+      Quisque non tellus orci, ac auctor augue mauris augue neque, gravida in
+      fermentum!
+    </p>
+  </body>
+</html>
+
+<!--
+     * background-position in px
+     1. By default it's 0px 0px => starting point will be top left colomn and, right and bottom sides will be clipped
+     2. background position: center => clips all sides equally and keeps the image in the center
+     3. background position: 30px 50px => moves the starting of image left to right 30px and top to bottom 50px
+     4. background-position: -30px -50px => moves the starting of image left to right 30px and bottom to top 50px
+     5. background-position: right bottom => starting of the image becomes right-bottom corner and top and left will be clipped
+     6.background-position: right 30px bottom 50px => start of the image moves right to left 30px and bottom to top 50px (start of the image is described in point 5)
+     * background-position in %
+     1. In % we are able to control clipped part of the image.
+     2. When nothing is given, by default clipped part will 100% on the right and 100% on the left
+     3.background-position: 50% 50% => it will equally clip on all 4 sides this is equalent to =>  background-position: center
+     4. background-position: 10% 50% => on the left side it is clipped 10% and on the right side we have 90% of the clipped part
+     5. background-position: 90% 50% => 10 percent on the right side and 90 percent on the left side.
+     6. background-position: 90% 40% => in the same way second value also work. Here 40 percent is clipped from the top, 60 percent is clipped in the bottom
+-->
+
+<!--
+     background-attachment: fixed;
+     1. background-position will be accrording to view port
+     2. background image will be in fixed position when we scroll down
+     3. This is called Parallax Scrolling
+-->
