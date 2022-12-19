@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Backgrounds: Part-2</title>
+
+    <style>
+      .div1 {
+        margin: 10px;
+        width: 250px;
+        height: 250px;
+        color: white;
+        padding: 20px;
+        border: 100px double red;
+
+        background-image: url("../Backgrounds-Part-1/image.jpg");
+        background-repeat: no-repeat;
+        /* Image got distorted */
+        background-size: 300px 150px;
+        /* width height */
+      }
+
+      .div2 {
+        margin: 10px;
+        width: 250px;
+        height: 250px;
+        color: white;
+        padding: 20px;
+        border: 100px double red;
+
+        background-image: url("../Backgrounds-Part-1/image.jpg");
+        background-repeat: no-repeat;
+        /* Image automatically given width so that it is not distorted */
+        background-size: 300px;
+      }
+
+      .div3 {
+        margin: 10px;
+        width: 250px;
+        height: 250px;
+        color: white;
+        padding: 20px;
+        border: 100px double red;
+
+        background-image: url("../Backgrounds-Part-1/image.jpg");
+        background-repeat: no-repeat;
+        /* Image width is taking 50% of the parent, hight is taken automatically */
+        background-size: 50%;
+        /* This will distort the image */
+        /* background-size: 50% 50%; */
+      }
+
+      .div4 {
+        margin: 10px;
+        width: 250px;
+        height: 250px;
+        color: white;
+        padding: 20px;
+        border: 100px double red;
+
+        background-image: url("../Backgrounds-Part-1/image.jpg");
+        background-repeat: no-repeat;
+        /* Best way to cover the image, part of it will be clipped, quality is not damaged*/
+        background-size: cover;
+        /* Will take full width, height automatically (might not take cover full height) */
+        /* background-size: contain; */
+
+        /* From where the image should start displaying */
+        /* Default it is padding box, upper left of the padding start (Padding is a part of the image) */
+        /* content-box: image start after padding */
+        /* border-box: image start from border */
+        background-origin: padding-box;
+
+        /* Following has three options: padding-box, content-box, border-box */
+        background-clip: content-box;
+      }
+
+      .div5 {
+        margin: 10px;
+        width: 250px;
+        height: 250px;
+        color: red;
+        padding: 20px;
+        border: 100px double red;
+
+        background: url("../Backgrounds-Part-1/image.jpg") left top no-repeat /
+            300px,
+          url("../Backgrounds-Part-1//image.jpg") right bottom no-repeat / 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="div1">
+      <h1>Div 1</h1>
+    </div>
+
+    <div class="div2">
+      <h1>Div 2</h1>
+    </div>
+
+    <div class="div3">
+      <h1>Div 3</h1>
+    </div>
+
+    <div class="div4">
+      <h1>Div 4</h1>
+    </div>
+
+    <div class="div5">
+      <h1>Div 5</h1>
+    </div>
+  </body>
+</html>
+<!-- 
+  Short hand declaration for background
+  background: color url repeat position attachment /size
+
+  Mutiple backgrounds
+  background: url postion repeat width, url postion repeat width
+ -->
