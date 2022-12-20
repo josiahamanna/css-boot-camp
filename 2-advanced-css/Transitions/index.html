@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transitions</title>
+    <style>
+      /* Two properties are mandatory: transition-property and transition-duration */
+      /* Additional two properties are transition-delay transition-timing-function */
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: orangered;
+        transition-property: width;
+        transition-duration: 1s;
+        transition-delay: 1s;
+        transition-timing-function: ease-in-out;
+        /* visit cubic-bezier.com and play around */
+        /* Short hand */
+        /* property duration delay timing-function background-color duration*/
+        /* transition: width 1s 1s ease-in-out, background-color 1s; */
+        /* If you want same duration for all */
+        /* transition: all 1s */
+      }
+
+      .box:hover {
+        width: 400px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
