@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform: Part-2</title>
+    <style>
+        .box {
+            font-size: 60px;
+            width: 200px;
+            height: 180px;
+            background-color: orangered;
+            color: white;
+            text-align: center;
+            padding: 55px;
+            margin: 200px auto;
+            box-sizing: border-box;
+            transition: transform 1s;
+        }
+
+        .box:hover {
+            /* transform: skew(30deg, 20deg); */
+
+            /* Flip effect on x axix (you can also do it on y axis) */
+            transform: rotateX(180deg); 
+
+            /* Try rotating on z axis */
+            /* transform: rotateX(180deg); */
+            /* You can to imagin than you are looking at it from top view */
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Box</div>
+</body>
+</html>
