@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transforms: Part-1</title>
+    <style>
+        .box {
+            font-size: 60px;
+            width: 200px;
+            height: 180px;
+            background-color: orangered;
+            position: relative;
+            animation-name: anim;
+            animation-duration:  4s;
+        }
+
+        @keyframes anim {
+           /*from {
+                left: 0;
+                top: 0;
+                color: orangered;
+            }
+            to {
+                left: 500px;
+                top: 0;
+                background-color: green;
+            } */
+
+            /* Instead of from and to use % */
+            0% {
+                left: 0;
+                top: 0;
+                color: orangered;
+            }
+            25% {
+                left: 500px;
+                top: 0;
+                background-color: green;
+            }
+            50% {
+                left: 500px;
+                top: 500px;
+                color: blue;
+            }
+            75% {
+                left: 0px;
+                top: 500px;
+                background-color: red;
+            }
+            100% {
+                left: 0px;
+                top: 0px;
+                background-color: yellow;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+</body>
+<div class="box"></div>
+
+</html>
