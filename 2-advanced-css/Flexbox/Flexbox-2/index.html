@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 2</title>
+    <style>
+        .container {
+            height: 700px;
+            margin-top: 50px;
+            /* padding: 20px 0px; */
+            background-color: #f19861;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .item {
+            padding: 30px;
+            margin: 10px;
+            background-color: #06af8f;
+            text-align: center;
+            font-size: 30px;
+            color: #fff;
+        }
+
+        .item1 {
+            /* font-size: 80px; */
+            order: 1;
+            flex-grow: 2;
+        }
+
+        .item5 {
+            /* font-size: 80px; */
+            order: -1;
+
+            /* auto default, flex-end, flex-start */
+            align-self: flex-end;
+            flex-grow: 1;
+
+            /* change flex-wrap and increase width (of item A and E) to see effect */
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item1">A</div>
+        <div class="item item2">B</div>
+        <div class="item item3">C</div>
+        <div class="item item4">D</div>
+        <div class="item item5">E</div>
+    </div>
+</body>
+
+</html>

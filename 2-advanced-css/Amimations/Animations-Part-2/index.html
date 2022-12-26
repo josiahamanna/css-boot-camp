@@ -14,11 +14,26 @@
             background-color: orangered;
             position: relative;
             animation-name: anim;
-            animation-duration:  10s;
+            animation-duration: 4s;
+            /* animation-delay: 10s; */
+            animation-iteration-count: 3; /* infinite */
+
+            /* alternate, alternate-reverse (iteration count should be more than one) */
+            animation-direction: reverse;
+            
+            /* same as transition timing funtion */
+            animation-timing-function: linear;
+
+            /* forward, backward (to see changes, 
+               give different value to animation-delay and change top and bottom values) */
+            animation-fill-mode: both;
+            
+            /* club everything */
+            animation: anim 4s ease-in 2s infinite alternate both;
         }
 
         @keyframes anim {
-           /*from {
+            /*from {
                 left: 0;
                 top: 0;
                 color: orangered;
@@ -35,28 +50,31 @@
                 top: 0px;
                 background-color: orangered;
             }
+
             25% {
                 left: 500px;
                 top: 0px;
                 background-color: green;
             }
+
             50% {
                 left: 500px;
                 top: 500px;
                 background-color: goldenrod;
             }
+
             75% {
                 left: 0px;
                 top: 500px;
                 background-color: royalblue;
             }
+
             100% {
                 left: 0px;
                 top: 0px;
                 background-color: orangered;
             }
         }
-
     </style>
 </head>
 
