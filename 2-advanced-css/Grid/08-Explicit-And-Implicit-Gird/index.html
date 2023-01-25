@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicit and Implicit Grid</title>
+    <style>
+        .container {
+            width: 600px;
+            background-color: #efefef;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 100px);
+            /* you can notice in the browser tool that implicit rows and columns are highlighted differently */
+
+            /* you can manipulate them as shown bellow */
+            /* grid-auto-flow: column; */
+            /* the cells that were implicit to changed to columns (before it was rows) */
+
+            /* you can change their dimentions */
+            /* grid-auto-rows: 150px; */
+            /* same goes for columns as well */
+            grid-gap: 1rem;
+        }
+
+        .item {
+            background-color: orangered;
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+        <div class="item">item 7</div>
+        <div class="item">item 8</div>
+    </div>
+</body>
+</html>
