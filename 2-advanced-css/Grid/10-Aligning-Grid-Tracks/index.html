@@ -7,37 +7,29 @@
     <title>Explicit and Implicit Grid</title>
     <style>
         .container {
-            width: 600px;
+            width: 400px;
+            height: 400px;
             background-color: #efefef;
             margin: auto;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(4, 100px);
+            grid-template-columns: repeat(2, 100px);
+            grid-template-rows: repeat(4, 50px);
             grid-gap: 1rem;
 
-            /* align items horizontally */
-            /* justify-items: stretch; */ /* defaul */
-            justify-items: start; /* center, end */
-
-            /* align items vertically */
-            /* align-items: stretch; */ /* defaul */
-            align-items: start; /* center, end */
+            /* following take these values */
+            /* start (default), center, end, space-around, space-between, space-around*/
+            justify-content: space-around;
+            /* following take these values */
+            /* start (default), center, end, space-around, space-between*/
+            align-content: space-around;
         }
 
         .item {
             background-color: orangered;
             color: white;
-            font-size: 2rem;
+            padding: 1rem;
+            font-size: 1rem;
             text-align: center;
-        }
-
-        /* aligning and justifying a cell */
-        .item-5 {
-            justify-self: center; /* start, end */
-            align-self: center; /* start, end */
-            /* play with this, the content is aligned accordingly */
-            /* grid-row: 2 / 4;
-            grid-column: 1 / -1; */
         }
     </style>
 </head>
@@ -47,7 +39,7 @@
         <div class="item">item 2</div>
         <div class="item">item 3</div>
         <div class="item">item 4</div>
-        <div class="item item-5">item 5</div>
+        <div class="item">item 5</div>
         <div class="item">item 6</div>
         <div class="item">item 7</div>
         <div class="item">item 8</div>
