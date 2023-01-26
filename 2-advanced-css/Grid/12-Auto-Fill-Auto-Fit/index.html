@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicit and Implicit Grid</title>
+    <style>
+        .container {
+            width: 90%;
+            background-color: #efefef;
+            margin: auto;
+            display: grid;
+            
+            /* auto-fill will create extra columns if it has space */
+            /* grid-template-columns: repeat(auto-fill, 80px); */
+
+            /* but auto-fit doesnt create extra coloums if space is available */
+            /* grid-template-columns: repeat(auto-fit, 80px); */
+
+            /* it maintains min max constraint and wraps items if space is not available */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
+        .item {
+            background-color: orangered;
+            color: white;
+            padding: 1rem;
+            font-size: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">lorem ipsum lorem</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 4</div>
+        <div class="item">item 5</div>
+        <div class="item">item 6</div>
+        <div class="item">item 7</div>
+        <div class="item">item 8</div>
+    </div>
+</body>
+</html>
